@@ -1,0 +1,27 @@
+import streamlit as st
+
+# Title of the web app
+st.title("My Streamlit Web App")
+
+# Display some text
+st.write("Welcome to my first Streamlit app!")
+
+# Create an interactive slider
+slider_value = st.slider("Select a number", min_value=0, max_value=100, value=50)
+
+# Display the slider value
+st.write(f"You selected {slider_value}")
+
+# Adding a simple chart
+import pandas as pd
+import numpy as np
+
+# Generate some data
+data = pd.DataFrame({
+    'x': np.arange(10),
+    'y': np.random.randint(0, 100, size=10)
+})
+
+# Create a line chart
+
+st.line_chart(data)
